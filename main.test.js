@@ -1,5 +1,6 @@
 const assert = require('assert')
 const main = require('./main')
+require('./test/option.test')
 
 describe('methods in server.js', () => {
   it('has serveNcmApi', () => {
