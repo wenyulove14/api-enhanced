@@ -4,7 +4,7 @@ const createOption = (query, crypto = '', checkToken = false) => {
     cookie: query.cookie || process.env.NETEASE_COOKIE,
     ua: query.ua || '',
     proxy: query.proxy,
-    realIP: query.realIP,
+    realIP: query.realIP || process.env.DEFAULT_REAL_IP || '',
     randomCNIP:
       process.env.ENABLE_RANDOM_CN_IP === 'true'
         ? !['false', false].includes(query.randomCNIP)
